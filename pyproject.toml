@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "jsonrpc-client"
+version = "0.1.0"
+description = "Клиент к существующему jsonrpc-сервису"
+authors = ["Заберов Дмитрий <zaberov.dv@internet.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "4.2.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
