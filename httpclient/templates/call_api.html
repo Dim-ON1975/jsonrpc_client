@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Call API</title>
+</head>
+<body>
+    <h1>Вызов удаленного метода API</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="method_name">Имя метода:</label>
+        <input type="text" id="method_name" name="method_name"><br><br>
+        <label for="params">Параметры:</label>
+        <input type="text" id="params" name="params"><br><br>
+        <input type="submit" value="Вызвать метод">
+    </form>
+    <br>
+    <h2>Результат:</h2>
+    <div>{{ result }}</div>
+</body>
+</html>
