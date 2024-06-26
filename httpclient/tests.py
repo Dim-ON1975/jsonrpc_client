@@ -1,14 +1,8 @@
-from django.test import TestCase
-import unittest
-
 import unittest
 from unittest.mock import MagicMock, patch
 from django.http import HttpRequest
 from httpclient.jsonrpc_client import call_remote_method
-from django.template.response import SimpleTemplateResponse
 from httpclient.views import CallAPIView
-import tempfile
-import re
 from httpclient.utils import create_temp_file, str_in_list_of_int
 
 
