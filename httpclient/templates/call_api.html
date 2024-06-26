@@ -1,21 +1,76 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Call API</title>
-</head>
-<body>
-    <h1>Вызов удаленного метода API</h1>
-    <form method="post">
-        {% csrf_token %}
-        <label for="method_name">Имя метода:</label>
-        <input type="text" id="method_name" name="method_name"><br><br>
-        <label for="params">Параметры:</label>
-        <input type="text" id="params" name="params"><br><br>
-        <input type="submit" value="Вызвать метод">
-    </form>
-    <br>
-    <h2>Результат:</h2>
-    <div>{{ result }}</div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Call API</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f7f7f7;
+            }
+            h1 {
+                color: #333;
+                text-align: center;
+            }
+            form {
+                width: 60%;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            input[type="text"] {
+                width: 98%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            input[type="submit"] {
+                background-color: #007bff;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+            h2 {
+                color: #333;
+                text-align: center;
+                margin-top: 20px;
+            }
+            div {
+                width: 62%;
+                margin: 0 auto;
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Вызов удаленного метода API</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="method_name">Имя метода:</label>
+            <input type="text" id="method_name" name="method_name"><br><br>
+            <label for="params">Параметры:</label>
+            <input type="text" id="params" name="params"><br><br>
+            <input type="submit" value="Вызвать метод">
+        </form>
+        <br>
+        <h2>Результат:</h2>
+        <div>{{ result }}</div>
+    </body>
 </html>
